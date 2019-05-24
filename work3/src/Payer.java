@@ -16,9 +16,6 @@ class Payer {
     }
 
     private void calculateDebt(Debt debt) {
-//        Debt.setSum.(Debt.getSum() + fine);
-//        fine = Debt.getSum();
-
         debt.sum = debt.sum + this.fine;
         this.fine = debt.sum - this.fine;
     }

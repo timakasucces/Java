@@ -1,7 +1,7 @@
 class NotHomeException extends Exception {
     private int day;
 
-    public void printAiAiAiMessage() {
+    void printAiAiAiMessage() {
         System.out.println("Ай-ай-ай! День " + this.day);
     }
 

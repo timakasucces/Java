@@ -10,12 +10,4 @@ class Debt {
     private Debt(double initSum) {
         sum = initSum;
     }
-
-//    static double getSum() {
-//        return debt.sum;
-//    }
-//
-//    static void setSum(double newSum) {
-//        debt.sum = newSum;
-//    }
 }
