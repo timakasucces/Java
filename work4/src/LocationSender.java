@@ -15,7 +15,7 @@ public class LocationSender extends TimerTask {
             long time = System.currentTimeMillis() - this.departure;
 
             System.out.println(
-                    "Самолет \"" + plane.getName() + "\" находится на расстоянии " + plane.speed * time / 60000 + " км от A"
+                "Самолет \"" + plane.getName() + "\" находится на расстоянии " + plane.speed * time / 60000 + " км от A"
             );
         }
     }
