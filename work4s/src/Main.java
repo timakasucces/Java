@@ -10,7 +10,12 @@ public class Main {
         Thread[] planes = new Thread[20];
 
         for (var i = 0; i < 20; i++) {
-            planes[i] = new Thread(new Plane("Пётр " + i, availableSpeed[new Random().nextInt(3)], dispatcher));
+//            planes[i] = new Thread(new Plane("Пётр " + i, availableSpeed[new Random().nextInt(3)], dispatcher));
+            planes[i] = new Plane("Пётр " + i, availableSpeed[new Random().nextInt(3)], dispatcher);
+        }
+
+        for (var i = 0; i < 20; i++) {
+            planes[i].start();
         }
     }
 }

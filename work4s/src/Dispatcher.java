@@ -8,8 +8,8 @@ class Dispatcher {
         Arrays.fill(airways, 3);
     }
 
-    synchronized int setAirway(int airwayNum) {
-        isAvailable = false;
+    int setAirway(int airwayNum) {
+//        isAvailable = false;
         if (airways[airwayNum] > 0) {
 //            try {
 //                wait();
@@ -22,7 +22,7 @@ class Dispatcher {
             } catch (InterruptedException e) {
 //              TODO: Handle exception
             }
-            isAvailable = true;
+//            isAvailable = true;
             notify();
             return airways[airwayNum]--;
         }
