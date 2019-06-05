@@ -18,19 +18,7 @@ class Dispatcher {
             }
             airways[airwayNum] = airways[airwayNum] - 1;
             isAvailable = true;
-            notify();
-
-//        if (airways[airwayNum] > 0) {
-//            try {
-//                Thread.sleep(100);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            isAvailable = true;
-//            airways[airwayNum]--;
-//            monitor.notify();
-//        }
-//        return 0;
+            notifyAll();
     }
 
     synchronized void contactDispatcher(Plane plane) {
