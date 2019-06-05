@@ -17,32 +17,6 @@ public class Plane implements Runnable{
 
     @Override
     public void run() {
-//        for (var i = 0; i < 5; i++) {
-//            dispatcher.contactDispatcher(this);
-//            while (dispatcher.airways[i] == 0) {
-//                if (i == 0) {
-//                    System.out.println("Самолет \"" + this.name + "\" ждет свободного коридора для взлета");
-//                } else {
-//                    try {
-//                        System.out.println("Самолет \"" + this.name + "\" ждет свободного коридора на участке " + i);
-//                        Thread.sleep(2 * 10 / this.speed * 60 * 1000);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//            }
-//            try {
-//                if (i != 0) {
-//                    dispatcher.airways[i - 1]++;
-//                }
-//                dispatcher.setAirway(i);
-//                System.out.println("Самолет \"" + this.name + "\" проходит участок " + i);
-//                System.out.println(Arrays.toString(dispatcher.airways));
-//                Thread.sleep(10 / this.speed * 60 * 1000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
         int currentAirwayNum = 0;
 
         goToAirway(currentAirwayNum);
@@ -69,8 +43,6 @@ public class Plane implements Runnable{
 
 
                 System.out.println("Самолет \"" + this.name + "\" проходит участок " + airwayNum);
-                System.out.println(dispatcher.airways[airwayNum]);
-                System.out.println('\n');
 
                 Thread.sleep(10 / this.speed * 60 * 1000);
             } catch (InterruptedException e) {
@@ -80,8 +52,7 @@ public class Plane implements Runnable{
             goToAirway(airwayNum + 1);
         } else {
             try {
-                System.out.println("Самолет \"" + this.name + "\" ждет свободного коридора на участке " + airwayNum);
-//                System.out.println('\n');
+                System.out.println("Самолет \"" + this.name + "\" ждет свободного коридора на участке " + airwayNum";
 
                 Thread.sleep(2 * 10 / this.speed * 60 * 1000);
                 goToAirway(airwayNum);
